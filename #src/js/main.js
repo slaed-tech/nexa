@@ -1,6 +1,7 @@
 // VARS
 const SLIDER_ACTIVE = true;
 const CUSTOM_CURSORS_ACTIVE = true;
+const ANIMATIONS_ACTIVE = true;
 
 // ON LOAD DOAM
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (CUSTOM_CURSORS_ACTIVE) cursorInit();
     } catch (error) {
         console.log(`CAN'T INIT CURSORS: ${error}`);
+    }
+
+    try {
+        if (ANIMATIONS_ACTIVE) initAos();
+    } catch (error) {
+        console.log(`CAN'T INIT AOS: ${error}`);
     }
 })
 
@@ -155,4 +162,12 @@ function cursorInit() {
     } else {
         console.log("CAN'T FIND THE CURSOR");
     }
+}
+
+// init aos
+function initAos() {
+    AOS.init({
+        duration: 700,
+        easing: 'ease-in-out',
+    });
 }

@@ -212,5 +212,7 @@ function initAos() {
     AOS.init({
         duration: 700,
         easing: 'ease-in-out',
+        offset: 60,
+        once: true,
     });
 }

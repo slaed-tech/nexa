@@ -10904,25 +10904,68 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
         console.log(`CAN'T INIT AOS: ${error}`);
     }
+
+    try {
+        headerBehaviour();
+    } catch (error) {
+        console.log(`CAN'T FIND HEADER: ${error}`);
+    }
+
+    try {
+        burgerMenu();
+    } catch (error) {
+        console.log(`CAN'T FIND BURGER: ${error}`);
+    }
 })
 
 // FUNCTIONS
 // header behaviour
-window.addEventListener("scroll", () => {
-    let nav = document.querySelector('header');
+function headerBehaviour() {
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", () => {
+        let nav = document.querySelector('header');
+        if (nav != undefined || nav != null) {
+            let offsetTop = nav.offsetTop + window.scrollY;
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (st > lastScrollTop && offsetTop != 0){
+                nav.classList.remove("fixed");
+                nav.classList.remove("static");
+            } else if (st < lastScrollTop && offsetTop != 0) {
+                nav.classList.remove("static");
+                nav.classList.add("fixed");
+            } else {
+                nav.classList.add("static");
+                nav.classList.remove("fixed");
+            }
+            lastScrollTop = st <= 0 ? 0 : st;
+        } else {
+            console.log("CAN'T FIND HEADER");
+        }
+    })
+}
+
+// burger menu
+function burgerMenu() {
+    let nav = document.querySelector("nav");
+    let nav_list = nav.querySelector(".nav__wrap");
+    let nav_btn = nav.querySelector(".burger-menu__btn");
+
+    let body = document.querySelector("body");
+
     if (nav != undefined || nav != null) {
-        let offsetTop = nav.offsetTop + window.scrollY;
         
-        if (offsetTop > 0) {
-            nav.classList.add("fixed");
-        }
-        else {
-            nav.classList.remove("fixed");
-        }
+        nav_btn.addEventListener("click", () => {
+            nav_btn.classList.toggle("active");
+            nav_list.classList.toggle("active");
+        
+            body.classList.toggle("stop-scroll");
+        })
+
     } else {
-        console.log("CAN'T FIND HEADER");
-    }
-})
+        console.log("CAN'T FIND NAV");
+    }    
+}
 
 // slider
 function initSplide() {

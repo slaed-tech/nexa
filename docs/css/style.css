@@ -1476,6 +1476,9 @@ section, header, footer, main {
   }
 }
 @media screen and (max-width: 480px) {
+  .cursor {
+    display: none;
+  }
   .main-container {
     max-width: calc(100% - 30px);
   }

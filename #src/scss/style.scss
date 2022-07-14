@@ -1116,6 +1116,57 @@ section, header, footer, main {
     }
 }
 
+//! CONTACT US
+.contacts {
+    padding-bottom: 111px;
+
+    .contacts__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-between;
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .list__item {
+                margin-bottom: 40px;
+
+                .contact__title {
+                    color: $soft-grey;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+                .contact__value {
+                    font-size: 36px;
+                    line-height: normal;
+                    text-transform: uppercase;
+                }
+                .social__wrap {
+                    display: flex;
+                    align-items: center;
+
+                    .social__link:hover {
+                        transform: translateY(-5px);
+                    }
+                    .social__link:not(:last-child) {
+                        margin-right: 27px;
+                    }
+                    img {
+                        height: 60px;
+                        width: 60px;
+                    }
+                }
+            }
+        }
+        .logo__wrap {
+            justify-self: center;
+        }
+    }
+}
+
 
 
 //! MDEIA REQUESTS
@@ -1337,6 +1388,13 @@ section, header, footer, main {
     .about-content {
         padding-bottom: 50px;
     }
+    .contacts .contacts__wrap {
+        justify-self: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        align-items:initial;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -1541,6 +1599,9 @@ section, header, footer, main {
     .page-title .title-1 {
         font-size: 50px;
     }
+    .contacts .contacts__wrap .logo__wrap .logo {
+        width: 250px;
+    }
     
 }
 
@@ -1692,6 +1753,13 @@ section, header, footer, main {
     .real-time .real-time__video {
         margin-bottom: 20px;
         height: 284px;
+    }
+    .contacts .contacts__wrap .info .list__item .contact__value {
+        font-size: 24px;
+    }
+    .contacts .contacts__wrap .info .list__item .social__wrap img {
+        height: 60px;
+        width: 60px;
     }
 
 }

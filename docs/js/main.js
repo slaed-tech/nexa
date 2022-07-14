@@ -10917,12 +10917,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
         console.log(`CAN'T FIND BURGER: ${error}`);
     }
-
-    try {
-        window.initMaps = initMaps;
-    } catch (error) {
-        console.log(`CAN'T FIND MAPS: ${error}`);
-    }
 })
 
 // FUNCTIONS
@@ -11104,26 +11098,4 @@ function initAos() {
         offset: 60,
         once: true,
     });
-}
-
-// init maps
-function initMaps() {
-    // Initialize and add the map
-    const uluru = { lat: -25.344, lng: 131.031 };
-    
-    // The map, centered at Uluru
-    let maps = [];
-    let map_elements = document.querySelectorAll(".map");
-    
-    map_elements.forEach(el => {
-        maps.push(new google.maps.Map(el, {zoom: 4, center: uluru,}));
-    })
-
-    // The marker, positioned at Uluru
-    let markers = [];
-    maps.forEach(map => {
-        let marker = new google.maps.Marker({position: uluru, map: map,});
-        markers.push(marker);
-    })
-
 }

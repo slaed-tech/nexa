@@ -336,6 +336,11 @@ h2 {
   text-transform: uppercase;
 }
 
+.title-4 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 p {
   padding: 0;
   margin: 0;
@@ -1365,6 +1370,90 @@ section, header, footer, main {
   height: 486px;
 }
 
+.about-cover {
+  padding-bottom: 100px;
+}
+.about-cover .cover__wrap {
+  background-color: #000;
+  width: 100%;
+  height: 486px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about-cover .cover__wrap .logo {
+  width: 640px;
+}
+
+.about-content {
+  padding-bottom: 100px;
+}
+.about-content .about-content__container {
+  margin: 0 auto;
+  max-width: calc(100% - 530px);
+}
+.about-content .about-content__container .desc {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.about-content .about-content__container .stats__list {
+  justify-self: center;
+  margin-bottom: 94px;
+}
+.about-content .about-content__container .stats__list .list__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 30px;
+}
+.about-content .about-content__container .stats__list .list__item .value {
+  font-size: 48px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.about-content .about-content__container .stats__list .list__item .title {
+  justify-self: flex-start;
+  color: #9F9F9F;
+  text-transform: uppercase;
+}
+.about-content .about-content__container .banner {
+  width: 100%;
+  border-top: 0.5px solid #000;
+  border-bottom: 0.5px solid #000;
+  padding: 50px 0;
+  margin-bottom: 100px;
+}
+.about-content .about-content__container .text__wrap .question {
+  margin-bottom: 50px;
+}
+.about-content .about-content__container .text__wrap .desc {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.about-images {
+  padding-bottom: 55px;
+}
+.about-images .img__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.about-images .img__wrap .cover-img {
+  height: 670px;
+}
+
 @media screen and (min-width: 1920px) {
   .main-container {
     max-width: 1380px;
@@ -1433,6 +1522,9 @@ section, header, footer, main {
   .case-info .case-info__wrap {
     gap: 30px;
   }
+  .about-content .about-content__container {
+    max-width: calc(100% - 60px);
+  }
 }
 @media screen and (max-width: 920px) {
   .about-us .about-content .deadlines {
@@ -1442,6 +1534,9 @@ section, header, footer, main {
   }
   .works .works__list .list__item .item__wrap {
     gap: 5%;
+  }
+  .about-images .img__wrap .cover-img {
+    height: 400px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1541,6 +1636,21 @@ section, header, footer, main {
   }
   .case-designs .designs__title .title-3::after {
     margin-top: 15px;
+  }
+  .about-cover .cover__wrap .logo {
+    width: 350px;
+  }
+  .about-cover .cover__wrap {
+    height: 343px;
+  }
+  .about-content .about-content__container .desc,
+.about-content .about-content__container .stats__list,
+.about-content .about-content__container .banner {
+    margin-bottom: 50px;
+  }
+  .about-cover,
+.about-content {
+    padding-bottom: 50px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1713,6 +1823,23 @@ section, header, footer, main {
   .next-case .next-case__wrap .next-case__link {
     font-size: 30px;
   }
+  .about-images .img__wrap .cover-img {
+    height: 312px;
+  }
+  .about-content .about-content__container .stats__list .list__item {
+    grid-template-columns: none;
+    gap: 0;
+  }
+  .about-content .about-content__container .stats__list .list__item .title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .about-content .about-content__container .text__wrap .question br {
+    display: none;
+  }
+  .about-images .img__wrap .cover-img {
+    grid-area: auto/span 2;
+  }
 }
 @media screen and (max-width: 480px) {
   .cursor {
@@ -1842,5 +1969,32 @@ section, header, footer, main {
   .case-info .case-info__wrap,
 .next-case .next-case__wrap .next-case__name {
     font-size: 12px;
+  }
+  .about-cover .cover__wrap {
+    height: 180px;
+  }
+  .about-cover .cover__wrap .logo {
+    width: 148px;
+  }
+  .about-content .about-content__container .stats__list .list__item .value {
+    font-size: 36px;
+  }
+  .about-content .about-content__container .banner {
+    padding: 30px 0;
+  }
+  .about-content .about-content__container {
+    max-width: calc(100% - 30px);
+  }
+  .about-content .about-content__container .stats__list .list__item .value {
+    margin-bottom: 10px;
+  }
+  .title-2 {
+    font-size: 30px;
+  }
+  .about-content .about-content__container .text__wrap .question {
+    margin-bottom: 30px;
+  }
+  .about-images .img__wrap .cover-img {
+    height: 160px;
   }
 }

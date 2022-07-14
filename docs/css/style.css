@@ -261,6 +261,28 @@ input[type=checkbox], input[type=radio] {
   color: #FFFFFF;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
 video {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1598,6 +1620,15 @@ section, header, footer, main {
   justify-self: flex-start;
 }
 
+.real-time {
+  padding-bottom: 55px;
+}
+.real-time .real-time__video {
+  width: 100%;
+  height: 670px;
+  margin-bottom: 30px;
+}
+
 @media screen and (min-width: 1920px) {
   .main-container {
     max-width: 1380px;
@@ -1698,6 +1729,9 @@ section, header, footer, main {
   }
   .product-card .case-card__wrap .case-card:not(:last-child) {
     margin-right: 20px;
+  }
+  .real-time .real-time__video {
+    height: 500px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2028,6 +2062,13 @@ section, header, footer, main {
   .product-card .case-card__wrap .case-card .card__info .case-info__list {
     margin-bottom: 30px;
   }
+  .real-time .real-time__video {
+    margin-bottom: 20px;
+    height: 400px;
+  }
+  .page-title .title-1 {
+    font-size: 50px;
+  }
 }
 @media screen and (max-width: 480px) {
   .cursor {
@@ -2184,5 +2225,9 @@ section, header, footer, main {
   }
   .about-images .img__wrap .cover-img {
     height: 160px;
+  }
+  .real-time .real-time__video {
+    margin-bottom: 20px;
+    height: 284px;
   }
 }

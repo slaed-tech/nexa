@@ -984,6 +984,10 @@ section, header, footer, main {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+.header .header__wrap .logo-link picture img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .header .header__wrap .nav .nav__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1692,7 +1696,17 @@ section, header, footer, main {
   width: 60px;
 }
 .contacts .contacts__wrap .logo__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-self: center;
+}
+.contacts .contacts__wrap .logo__wrap img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .contact-form {

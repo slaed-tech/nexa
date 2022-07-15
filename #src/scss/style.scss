@@ -490,6 +490,10 @@ section, header, footer, main {
                 left: 0;
                 top: 0;
                 transition: all .5s ease;
+
+                img {
+                    object-fit: contain;
+                }
             }
         }
         .nav {
@@ -1166,7 +1170,13 @@ section, header, footer, main {
             }
         }
         .logo__wrap {
+            display: flex;
+            justify-content: center;
             justify-self: center;
+
+            img {
+                object-fit: contain;
+            }
         }
     }
 }

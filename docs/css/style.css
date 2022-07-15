@@ -1794,6 +1794,10 @@ section, header, footer, main {
   color: red;
 }
 
+.contact-map {
+  padding-bottom: 100px;
+}
+
 @media screen and (min-width: 1920px) {
   .main-container {
     max-width: 1380px;
@@ -1982,7 +1986,8 @@ section, header, footer, main {
   .case-designs {
     padding-bottom: 60px;
   }
-  .case-map {
+  .case-map,
+.contact-map {
     padding-bottom: 70px;
   }
   .next-case {
@@ -2319,7 +2324,8 @@ section, header, footer, main {
   .case-designs {
     padding-bottom: 30px;
   }
-  .case-map {
+  .case-map,
+.contact-map {
     padding-bottom: 30px;
   }
   .next-case {

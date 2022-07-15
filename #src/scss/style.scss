@@ -1239,6 +1239,10 @@ section, header, footer, main {
     }
 }
 
+.contact-map {
+    padding-bottom: 100px;
+}
+
 
 
 //! MDEIA REQUESTS
@@ -1430,7 +1434,8 @@ section, header, footer, main {
     .case-designs {
         padding-bottom: 60px;
     }
-    .case-map {
+    .case-map,
+    .contact-map {
         padding-bottom: 70px;
     }
     .next-case {
@@ -1751,7 +1756,8 @@ section, header, footer, main {
     .case-designs {
         padding-bottom: 30px;
     }
-    .case-map {
+    .case-map,
+    .contact-map {
         padding-bottom: 30px;
     }
     .next-case {

@@ -117,6 +117,7 @@ function img() {
         .pipe(
             webp({
                 quality: 100,
+                lossless: true,
             })
         )
         .pipe(dest(path.build.IMG))

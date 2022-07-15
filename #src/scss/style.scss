@@ -1167,6 +1167,64 @@ section, header, footer, main {
     }
 }
 
+//? CONTACT FORM
+.contact-form {
+    padding-bottom: 120px;
+}
+
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .fields_wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+
+        ._first-name-wrap {
+            grid-area: 1 / 1 / 1 / span 1;
+        }
+        ._last-name-wrap {
+            grid-area: 2 / 1 / 2 / span 1;
+        }
+        ._email-wrap {
+            grid-area: 1 / 2 / 1 / span 1;
+        }
+        ._tel-wrap {
+            grid-area: 2 / 2 / 2 / span 1;
+        }
+        ._purpose-wrap {
+            grid-area: 3 / 1 / 3 / span 2;
+        }
+
+        .input-wrap {
+
+            .field {
+                padding: 15px 0;
+                width: 100%;
+                border: none;
+                border-bottom: .5px solid $black;
+                background: transparent;
+            
+                &::placeholder {
+                    text-transform: uppercase;
+                    color: $soft-grey;
+                }
+                &._error {
+                    border-bottom-color: red;
+                }
+                &._error::placeholder {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
 
 
 //! MDEIA REQUESTS
@@ -1760,6 +1818,27 @@ section, header, footer, main {
     .contacts .contacts__wrap .info .list__item .social__wrap img {
         height: 60px;
         width: 60px;
+    }
+    .feedback__form {
+        .fields_wrap {
+            grid-template-columns: none;
+
+            ._first-name-wrap {
+                grid-area: auto;
+            }
+            ._last-name-wrap {
+                grid-area: auto;
+            }
+            ._email-wrap {
+                grid-area: auto;
+            }
+            ._tel-wrap {
+                grid-area: auto;
+            }
+            ._purpose-wrap {
+                grid-area: auto;
+            }
+        }
     }
 
 }

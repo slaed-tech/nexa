@@ -15,25 +15,49 @@
                 <div class="contacts__wrap">
                     <ul class="list-reset info">
                         <li class="list__item list__item-1">
-                            <p class="contact__title">Phone</p>
-                            <p class="contact__value">+62 812 8000 70 70</p>
+                            <p class="contact__title" data-aos="fade-in" data-duration="400" data-aos-delay="">Phone</p>
+                            <p class="contact__value" data-aos="fade-in" data-duration="400" data-aos-delay="300">+62 812 8000 70 70</p>
                         </li>
                         <li class="list__item list__item-2">
-                            <p class="contact__title">contact us</p>
-                            <div class="social__wrap">
+                            <p class="contact__title" data-aos="fade-in" data-duration="400" data-aos-delay="300">contact us</p>
+                            <div class="social__wrap" data-aos="fade-in" data-duration="400" data-aos-delay="600">
                                 <a href="https://www.whatsapp.com/" target="_blank" class="social__link"><img src="img/icons/whatsapp.svg" alt="whatsapp"></a>
                                 <a href="https://telegram.org/" target="_blank" class="social__link"><img src="img/icons/telegram.svg" alt="telegram"></a>
                             </div>
                         </li>
                         <li class="list__item list__item-3">
-                            <p class="contact__title">ADRESS</p>
-                            <p class="contact__value">Umalas, Canggu, Bali</p>
+                            <p class="contact__title" data-aos="fade-in" data-duration="400" data-aos-delay="600">ADRESS</p>
+                            <p class="contact__value" data-aos="fade-in" data-duration="400" data-aos-delay="900">Umalas, Canggu, Bali</p>
                         </li>
                     </ul>
-                    <div class="logo__wrap">
+                    <div class="logo__wrap" data-aos="zoom-in" data-duration="400" data-aos-delay="900">
                         <img src="img/logo-wt.svg" alt="logo" class="logo">
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="contact-form" class="contact-form">
+            <div class="main-container">
+                <form action="submit" method="post" class="feedback__form" data-aos="fade-in" data-duration="400" data-aos-delay="">
+                    <div class="fields_wrap">
+                        <div class="input-wrap _first-name-wrap">
+                            <input type="text" class="field _req" id="first-name" name="first-name" placeholder="first name">
+                        </div>
+                        <div class="input-wrap _last-name-wrap">
+                            <input type="text" class="field _req" id="last-name" name="last-name" placeholder="last name">
+                        </div>
+                        <div class="input-wrap _email-wrap">
+                            <input type="email" class="field _req" id="email" name="email" placeholder="email">
+                        </div>
+                        <div class="input-wrap _tel-wrap">
+                            <input type="tel" class="field _req _tel" id="phone" name="tel" placeholder="mobile phone">
+                        </div>
+                        <div class="input-wrap _purpose-wrap">
+                            <input type="text" class="field _req" id="purpose" name="purpose" placeholder="PURPOSE OF ENQUIRY">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="Send">
+                </form>
             </div>
         </section>
         <section id="contact-map" class="contact-map">

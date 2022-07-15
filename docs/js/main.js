@@ -10917,6 +10917,12 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
         console.log(`CAN'T FIND BURGER: ${error}`);
     }
+
+    try {
+        formValidateInit();
+    } catch (error) {
+        console.log(`CAN'T FIND FORM: ${error}`);
+    }
 })
 
 // FUNCTIONS
@@ -11098,4 +11104,94 @@ function initAos() {
         offset: 60,
         once: true,
     });
+}
+
+// form validation init
+function formValidateInit() {
+    // form
+    const form_selector = ".feedback__form";
+    const form = document.querySelectorAll(form_selector);
+
+    if (form.length != 0) {
+        // on submit
+        for (let i = 0; i < form.length; i++) {
+            form[i].addEventListener("submit", (e) => { e.preventDefault(); formSend(form[i]) });
+        }
+    }
+
+    // form send
+    function formSend(form) {
+        // test for valid
+        let valid = isValid(form);
+
+        // callback
+        if (valid) {
+            alert("Submited!");
+        } else {
+            console.log(`ERROR ON: ${form}`);
+        }
+    }
+
+    // is valid
+    function isValid(form) {
+        let error = 0;
+        let req_selector = "._req";
+        let formReq = form.querySelectorAll(req_selector);
+
+        formReq.forEach(input => {
+            formRemoveError(input);
+
+            if (input.getAttribute('type') == 'email') {
+                if (!emailTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else if (input.getAttribute('type') == 'tel') {
+                if(!telTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else if (input.getAttribute('name') == 'name') {
+                if(!nameTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } else {
+                if (input.value == '') {
+                    formAddError(input);
+                    error++;
+                }
+            }
+        })
+
+        console.log(`${error} ERRORS ON: ${form}`);
+        return (error > 0) ? false : true;
+    }
+    
+    // form add error
+    function formAddError(input) {
+        input.parentNode.classList.add("_error");
+        input.classList.add("_error");
+    }
+
+    // form remove error
+    function formRemoveError(input) {
+        input.parentNode.classList.remove("_error");
+        input.classList.remove("_error");
+    }
+
+    // email test
+    function emailTest(input) {
+        return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(input.value);
+    }
+
+    // tel test
+    function telTest(input) {
+        return /\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$/g.test(input.value);
+    }
+
+    // name test
+    function nameTest(input) {
+        return /(^[a-zA-Z][a-zA-Z\s]{0,20}[a-zA-Z]$)/g.test(input.value);
+    }
 }

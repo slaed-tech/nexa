@@ -710,7 +710,8 @@ section, header, footer, main {
         .splide__slide {
             height: 522px;
             width: 440px;
-
+            cursor: pointer;
+            
             &:nth-child(even) {
                 height: 408px;
             }   

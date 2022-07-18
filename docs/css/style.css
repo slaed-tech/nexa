@@ -1236,6 +1236,7 @@ section, header, footer, main {
 .work-slider .work__slider .splide__slide {
   height: 522px;
   width: 440px;
+  cursor: pointer;
 }
 .work-slider .work__slider .splide__slide:nth-child(even) {
   height: 408px;

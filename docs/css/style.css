@@ -718,7 +718,7 @@ section, header, footer, main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 20px;
+  padding: 13px 60px;
   color: #FFFFFF;
   background-color: #000;
   border-radius: 50px;
@@ -742,7 +742,6 @@ section, header, footer, main {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: relative;
-  cursor: pointer;
 }
 .list .list__item::after {
   content: "";
@@ -1794,10 +1793,6 @@ section, header, footer, main {
 .feedback__form .fields_wrap .input-wrap .field._error::placeholder {
   color: red;
 }
-.feedback__form .btn {
-  padding: 13px 60px;
-}
-
 .contact-map {
   padding-bottom: 100px;
 }
@@ -2034,11 +2029,11 @@ section, header, footer, main {
   }
 }
 @media screen and (max-width: 640px) {
+  .about-media .about-media__wrap {
+    height: 340px;
+  }
   .product-card .case-card__wrap .case-card:not(:last-child) {
     margin-right: 0;
-  }
-  .btn {
-    padding: 10px 30px;
   }
   .hero .title-1 {
     font-size: 40px;
@@ -2135,12 +2130,6 @@ section, header, footer, main {
   }
   .about-us .grid-12 {
     display: block;
-  }
-  .about-media .about-media_container {
-    max-width: 100%;
-  }
-  .about-media .about-media_container .about-media__wrap {
-    height: 284px;
   }
   .news .grid-12 {
     display: block;
@@ -2264,6 +2253,8 @@ section, header, footer, main {
 @media screen and (max-width: 480px) {
   .feedback__form .btn {
     width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .main-container {
     max-width: calc(100% - 30px);

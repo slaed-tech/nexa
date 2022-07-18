@@ -1482,6 +1482,9 @@ section, header, footer, main {
 }
 
 @media screen and (max-width: 640px) {
+    .product-card .case-card__wrap .case-card:not(:last-child) {
+        margin-right: 0;
+    }
     .btn {
         padding: 10px 30px;
     }
@@ -1665,7 +1668,7 @@ section, header, footer, main {
 
             .cover-img {
                 width: 100%;
-                height: 200px;
+                height: 250px;
                 margin-bottom: 20px;
             }
         }
@@ -1777,7 +1780,7 @@ section, header, footer, main {
         margin-bottom: 30px;
     }
     .case-hero .cover-img, .case-designs .designs__gallery .gallery__item {
-        height: 155px;
+        height: 300px;
     }
     .case-hero .img__wrap, .case-designs .designs__gallery {
         display: flex;
@@ -1809,7 +1812,7 @@ section, header, footer, main {
         font-size: 12px;
     }
     .about-cover .cover__wrap {
-        height: 180px;
+        height: 250px;
     }
     .about-cover .cover__wrap .logo {
         width: 148px;
@@ -1833,7 +1836,7 @@ section, header, footer, main {
         margin-bottom: 30px;
     }
     .about-images .img__wrap .cover-img {
-        height: 160px;
+        height: 300px;
     }
     .real-time .real-time__video {
         margin-bottom: 20px;

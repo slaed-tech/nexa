@@ -342,7 +342,7 @@ section, header, footer, main {
         }
 
 
-        &:hover {
+        &:hover:not(.lock) {
             .item__wrap {
                 color: $white;
 
@@ -541,7 +541,7 @@ section, header, footer, main {
                     align-items: flex-end;
 
                     .drop-down__options {
-                        transition: all .5s ease;
+                        transition: all .2s ease;
                         height: 0;
                         position: absolute;
                         background-color: $black;
@@ -553,7 +553,6 @@ section, header, footer, main {
                         top: 150%;
                         padding: 0;
                         overflow: hidden;
-                        border-radius: 20px;
 
                         .lang-country {
                             margin-right: 15px;
@@ -711,7 +710,7 @@ section, header, footer, main {
             height: 522px;
             width: 440px;
             cursor: pointer;
-            
+
             &:nth-child(even) {
                 height: 408px;
             }   
@@ -1223,6 +1222,7 @@ section, header, footer, main {
                 width: 100%;
                 border: none;
                 border-bottom: .5px solid $black;
+                border-radius: 0 !important;
                 background: transparent;
             
                 &::placeholder {
@@ -1237,6 +1237,9 @@ section, header, footer, main {
                 }
             }
         }
+    }
+    .btn {
+        padding: 13px 60px;
     }
 }
 
@@ -1320,6 +1323,9 @@ section, header, footer, main {
 }
 
 @media screen and (max-width: 920px) {
+    .cursor {
+        display: none;
+    }
     .about-us .about-content .deadlines {
         grid-template-columns: none;
         grid-template-rows: repeat(2, 1fr);
@@ -1607,11 +1613,11 @@ section, header, footer, main {
         }
     }
     .work-slider .work__slider .splide__slide {
-        height: 385px;
-        width: 340px;
+        height: 470px;
+        width: 450px;
     
         &:nth-child(even) {
-            height: 385px;
+            height: 470px;
         }
     }
     .works .works__list .list__item .item__wrap {
@@ -1684,8 +1690,8 @@ section, header, footer, main {
 }
 
 @media screen and (max-width: 480px) {
-    .cursor {
-        display: none;
+    .feedback__form .btn {
+        width: 100%;
     }
     .main-container {
         max-width: calc(100% - 30px);
@@ -1726,11 +1732,11 @@ section, header, footer, main {
         padding-top: 30px;
     }
     .work-slider .work__slider .splide__slide {
-        height: 285px;
-        width: 240px;
+        height: 420px;
+        width: 400px;
     
         &:nth-child(even) {
-            height: 285px;
+            height: 420px;
         }
     }
     .list .list__item::after {
